@@ -1,9 +1,11 @@
-package com.example.logitrack.repository;
+package com.logTrack.repository;
 
-import com.example.logitrack.entity.*;
+
+import com.logTrack.entity.*;
 import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.query.Param;
 import java.util.*;
+import com.logTrack.entity.Viagem;
 
 
 public interface ViagemRepository extends JpaRepository<Viagem, Long> {

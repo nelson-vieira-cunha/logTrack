@@ -1,8 +1,8 @@
-package com.example.logitrack.controller;
+package com.logTrack.controller;
 
-import com.example.logitrack.entity.Viagem;
-import com.example.logitrack.repository.ViagemRepository;
-import com.example.logitrack.service.RelatorioService;
+import com.logTrack.entity.Viagem;
+import com.logTrack.repository.ViagemRepository;
+import com.logTrack.service.RelatorioService;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.example.logitrack.entity;
+package com.logTrack.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ public class Viagem {
 
     @ManyToOne
     @JoinColumn(name = "veiculo_id", nullable = false)
-    private Veiculo veiculo;
+    private com.logTrack.entity.Veiculo veiculo;
 
     @Column(name = "data_saida", nullable = false)
     private LocalDateTime dataSaida;
@@ -29,8 +29,8 @@ public class Viagem {
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
-    public Veiculo getVeiculo() { return veiculo; }
-    public void setVeiculo(Veiculo veiculo) { this.veiculo = veiculo; }
+    public com.logTrack.entity.Veiculo getVeiculo() { return veiculo; }
+    public void setVeiculo(com.logTrack.entity.Veiculo veiculo) { this.veiculo = veiculo; }
     public LocalDateTime getDataSaida() { return dataSaida; }
     public void setDataSaida(LocalDateTime dataSaida) { this.dataSaida = dataSaida; }
     public LocalDateTime getDataChegada() { return dataChegada; }

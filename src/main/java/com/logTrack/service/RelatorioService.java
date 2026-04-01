@@ -1,6 +1,6 @@
-package com.example.logitrack.service;
+package com.logTrack.service;
 
-import com.example.logitrack.repository.ViagemRepository;
+import com.logTrack.repository.ViagemRepository;
 import org.springframework.stereotype.Service;
 import java.util.*;
 
