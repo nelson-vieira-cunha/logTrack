@@ -2,6 +2,7 @@ package com.logTrack.entity;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "viagens")
@@ -16,9 +17,12 @@ public class Viagem {
     private com.logTrack.entity.Veiculo veiculo;
 
     @Column(name = "data_saida", nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime dataSaida;
 
+
     @Column(name = "data_chegada")
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime dataChegada;
 
     private String origem;

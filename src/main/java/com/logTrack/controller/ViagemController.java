@@ -6,6 +6,7 @@ import com.logTrack.service.RelatorioService;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/viagens")
 public class ViagemController {

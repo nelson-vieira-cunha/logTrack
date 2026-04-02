@@ -1,17 +1,20 @@
 package com.logTrack.service;
 
+import com.logTrack.repository.ManutencaoRepository;
 import com.logTrack.repository.ViagemRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.*;
 
 @Service
 public class RelatorioService {
 
-    private final ViagemRepository viagemRepository;
 
-    public RelatorioService(ViagemRepository viagemRepository) {
-        this.viagemRepository = viagemRepository;
-    }
+        @Autowired
+        private ManutencaoRepository manutencaoRepository;
+
+        @Autowired
+        private ViagemRepository viagemRepository;
 
     public Map<String, Object> getDashboard(Long veiculoId) {
         Map<String, Object> map = new HashMap<>();
@@ -27,4 +30,4 @@ public class RelatorioService {
 
         return map;
     }
-}
+    }

@@ -29,4 +29,15 @@ public interface ViagemRepository extends JpaRepository<Viagem, Long> {
     // Total viagens
     @Query(value = "SELECT COUNT(*) FROM viagens", nativeQuery = true)
     Long totalViagens();
+
+    @Query(value = """
+    SELECT v.placa, SUM(vi.km_percorrida) AS total_km
+    FROM viagens vi
+    JOIN veiculos v ON v.id = vi.veiculo_id
+    GROUP BY v.placa
+    ORDER BY total_km DESC
+    LIMIT 1
+""", nativeQuery = true)
+    Object rankingUtilizacao();
+
 }
